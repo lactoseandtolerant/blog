@@ -1,0 +1,28 @@
+---
+layout: page
+title: Ice Cream Reviews
+permalink: /icecream/
+---
+{% assign icecream-posts = site.array %}
+{% for post in site.posts %}
+  {% if post.categories contains 'ice-cream' %}
+    {% if post.rating %}
+      {% assign icecream-posts = icecream-posts | push: post %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<div class="category-page">
+  <h3>Top Rated</h3>
+  <table>
+    <tbody>
+      {% assign sorted-icecream-posts = icecream-posts | sort: 'rating' | reverse %}
+      {% for post in sorted-icecream-posts %}
+      <tr>
+        <td class={{post.rating}}><span class="post-rating">{{post.rating}}</span></td>
+        <td><a href={{post.url}}>{{post.title}}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
