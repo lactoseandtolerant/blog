@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: It Ain't Easy Being Cheesy
-description: Random thoughts by Chike Orjih.
+title: Lactose and Tolerant
+description: Ice cream bloggin!.
 paginate: 5
 
 # Build settings
@@ -18,4 +18,4 @@ plugins: [jekyll-paginate, jekyll-admin]
 
 # other
 array: []
-host_url: http://blog.chikeorjih.com
+host_url: http://www.lactoseandtolerant.com
